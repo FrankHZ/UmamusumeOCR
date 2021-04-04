@@ -1,0 +1,10 @@
+{
+  "Language": "zh-Hans",
+  "WindowArea": "1658, 40, 1106, 1991",
+  "GameArea": "14, 57, 1077, 1921",
+  "WindowTitle": "umamusume",
+  "Ocr": "azure",
+  "OcrConfig": "AzureConfigs/AzureOCR.json",
+  "Translator": "azure",
+  "TranslatorConfig": "AzureConfigs/AzureTranslator.json"
+}

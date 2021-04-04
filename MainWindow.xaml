@@ -1,0 +1,107 @@
+﻿<Window x:Class="UmamusumeOCR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UmamusumeOCR"
+        mc:Ignorable="d"
+         Height="600" Width="450"
+        Topmost="True">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel >
+            <StackPanel DockPanel.Dock="Left">
+                <Button  Name="ReloadConfigBtn" Margin="1">
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center" >
+                        Reload Config
+                        </TextBlock>
+                        <TextBlock TextAlignment="Center">
+                        刷新设置
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button  Name="ResetGameWindowHandlerBtn" Margin="1">
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center" >
+                        Recapture Game Window
+                        </TextBlock>
+                        <TextBlock TextAlignment="Center">
+                        重新捕捉游戏窗口
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Name="SaveGameWindowBtn" Margin="1">
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center" >
+                        Save Game Window Info
+                        </TextBlock>
+                        <TextBlock TextAlignment="Center">
+                        保存游戏窗口信息
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button  Name="ResetGameWindowBtn" Margin="1">
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center" >
+                        Reset Game Window
+                        </TextBlock>
+                        <TextBlock TextAlignment="Center">
+                        重置游戏窗口
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="1">
+                <Button Margin="1" Name="StoryDialogueBtn">Story Dialogue 对话</Button>
+                <Button Margin="1" Name="ChoiceBtn">Choices 选项</Button>
+                <Button Margin="1" Name="FullScreenBtn">Fullscreen 全部</Button>
+                <Button Margin="1" Name="CenterDialogueBtn">Center 中间</Button>
+                <TextBlock DockPanel.Dock="Bottom" Name="StatusBlock" FontSize="12" TextWrapping="Wrap" TextAlignment="Center">
+                    No game window detected
+                </TextBlock>
+            </StackPanel>
+        </DockPanel>
+        <ScrollViewer Name="SV1" Margin="5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="0">
+            <TextBox Margin="5" 
+                    Name="TextBox1"
+                    FontSize="16"
+                    TextWrapping = "Wrap"
+                    IsReadOnly="True"
+                    BorderThickness="0"/>
+        </ScrollViewer>
+        <ScrollViewer Name="SV2" Margin="5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="0">
+            <TextBox Margin="5" 
+                    Name="TextBox2"
+                    FontSize="16"
+                    TextWrapping = "Wrap"
+                    IsReadOnly="True"
+                    BorderThickness="0"/>
+        </ScrollViewer>
+        <ScrollViewer Name="SV3" Margin="5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="3" Grid.Column="0">
+            <TextBox Margin="5" 
+                    Name="TextBox3"
+                    FontSize="16"
+                    TextWrapping = "Wrap"
+                    IsReadOnly="True"
+                    BorderThickness="0"/>
+        </ScrollViewer>
+        <ScrollViewer Name="SV4" Margin="5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="4" Grid.Column="0">
+            <TextBox Margin="5" 
+                    Name="TextBox4"
+                    FontSize="16"
+                    TextWrapping = "Wrap"
+                    IsReadOnly="True"
+                    BorderThickness="0"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
