@@ -18,13 +18,13 @@ Release on the right side of this page -> v1.X -> publish.zip
 Run UmamusumeOCR.exe to generate the config.json file if you are runing this first time
 
 Change the value of WindowTitle in the config file to match the window title of your Android Emulator (just a part of the title is fine, case sensitive) if you are not running DMM Player version, e.g.:
-"WindowTitle": "Bluestacks",
+`"WindowTitle": "Bluestacks",`
 
 Click Reload Config Button, then start Umamusume from DMM player or your Emulator.
 
-If UmamusumeOCR is not minimized and the game window is active, the status bar under will become "Game window detected" (Not working in v1.0)
+If UmamusumeOCR is not minimized and the game window is active, the status bar under will become "Game window detected"
 
-Click Save Game Window Info Button to capture the game window area, then click Full-Screen Button. If everything is fine, some texts and translations should come out. A FullScreen.bmp image file should also be generated under the UmamusumeOCR.exe folder. Check that image and modify "GameArea" in Config to make Full Screen capture matches the exact game area (no title bar, etc.). "GameArea" is in the following format: X, Y, Width, Height, which X and Y are relative to the Top Left of your Game Window. Reload Config again.
+Click Save Game Window Info Button to capture the game window area, then click Full-Screen Button. If everything is fine, some texts and translations should come out. A Fullscreen.png image file should also be generated under the UmamusumeOCR.exe folder. Check that image and modify "GameArea" in Config to make Full Screen capture matches the exact game area (no title bar, etc.). "GameArea" is in the following format: X, Y, Width, Height, which X and Y are relative to the Top Left of your Game Window. Reload Config again.
 
 Go to any Dialogue in the game, and the text and translation should automatically come out.
 
