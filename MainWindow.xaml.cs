@@ -14,7 +14,7 @@ namespace UmamusumeOCR
     public partial class MainWindow : Window
     {
         private static readonly string TitleText = "Umamusume OCR";
-        private readonly Processor p;
+        private Processor p;
         private Config gameConfig;
         private string lastUpdatedText = null;
 
@@ -26,8 +26,7 @@ namespace UmamusumeOCR
             InitializeComponent();
             Title = TitleText;
             ReloadConfig(null, null);
-            p = new(OcrFactory.BuildOcr(gameConfig.Ocr, gameConfig.OcrConfig));
-            translator = TranslatorFactory.BuildTranslator(gameConfig.Translator, gameConfig.Language, gameConfig.TranslatorConfig);
+
             var dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(DispatcherTimer_TickAsync);
             dispatcherTimer.Interval = new TimeSpan(300);
@@ -48,6 +47,8 @@ namespace UmamusumeOCR
         {
             gameConfig = Config.LoadGameConfig();
             StatusBlock.Text = "Config loaded";
+            p = new(OcrFactory.BuildOcr(gameConfig.Ocr, gameConfig.OcrConfig));
+            translator = TranslatorFactory.BuildTranslator(gameConfig.Translator, gameConfig.Language, gameConfig.TranslatorConfig);
         }
 
         private void ResetGameWindowHandler(object sender, EventArgs e)
@@ -188,8 +189,8 @@ namespace UmamusumeOCR
                     if (targetTitle?.Contains(gameConfig.WindowTitle) == true && targetTitle != TitleText)
                     {
                         gameWindowHandler = handler;
+                        StatusBlock.Text = "Game window detected";
                     }
-                    StatusBlock.Text = "Game window detected";
                 }
 
                 if (handler == gameWindowHandler && WindowState == WindowState.Normal)
