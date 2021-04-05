@@ -66,10 +66,10 @@ namespace UmamusumeOCR
                 if (gameConfig.GameArea.Width > windowRect.Width || gameConfig.GameArea.Height > windowRect.Height)
                 {
                     var ratio = (double)Processor.ProcessingSize.Width / Processor.ProcessingSize.Height;
-                    var gameAreaY = windowRect.Y + 57;
+                    var gameAreaY = 57;
                     var gameAreaHeight = windowRect.Height - 60;
                     var gameAreaWidth = (int)(gameAreaHeight * ratio);
-                    var gameAreaX = windowRect.X + (windowRect.Width - gameAreaWidth) / 2;
+                    var gameAreaX = (windowRect.Width - gameAreaWidth) / 2;
                     gameConfig.GameArea = new(gameAreaX, gameAreaY, gameAreaWidth, gameAreaHeight);
                 }
                     
